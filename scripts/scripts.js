@@ -189,8 +189,20 @@ const starterFinder = (players, starters) => {
 const findGen = (region) => {
   if(region === "Kanto") {
     return Kanto;
+  } else if(region === "Johto"){
+    return Johto;
+  } else if(region === "Hoenn"){
+    return Hoenn;
+  } else if(region === "Sinnoh"){
+    return Sinnoh;
+  } else if(region === "Unova"){
+    return Unova;
+  } else if(region === "Kalos"){
+    return Kalos;
+  } else if (region === "Alola"){
+    return Alola;
   } else if(region === "Galar"){
-    return Galar
+    return Galar;
   } else {
     console.log("error, gen not found")
   }
