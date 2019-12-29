@@ -1,5 +1,8 @@
 # Starter Assigner
 
+## Live Project Available at:
+https://juliansiow.github.io/starter-assigner/
+
 Starter Assigner was built for my friends and I to randomly assign starter pokemon between the three of us for a group play through of a pokemon game.  
 
 ### Technologies Used: 
