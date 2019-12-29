@@ -22,10 +22,8 @@ h1{
 }
 
 .player{
-  float: left;
-  width: 33.3%;
-  padding: 20px;
   text-align: center;
+  padding: 30px;
 }
 
 .pokemon{
