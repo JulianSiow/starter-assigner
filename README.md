@@ -21,5 +21,4 @@ Starter Assigner was built for my friends and I to randomly assign starter pokem
 
 ### Notable Bugs/To Dos:
 
-* Not all regions have starter data
 * Code cleanup
