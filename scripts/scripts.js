@@ -83,8 +83,13 @@ const makeCards = (results) => {
     $('#player-cards').append(`
     <div class="player">
       <h3>${result.player}:</h3>
-      <h5>${result.pokemon.name}</h5>
-      <img src=${result.pokemon.img}>
+      <div class="pokemon">
+        <div class="pokemon-hidden"></div>
+        <div class="pokemon-card">
+          <h5>${result.pokemon.name}</h5>
+          <img src=${result.pokemon.img}>
+        </div>
+      </div>
     </div>
     `)
   })
