@@ -1,18 +1,94 @@
+class Pokemon {
+  constructor(name, img, type){
+    this.name = name;
+    this.img = img;
+    this.type = type;
+  }
+};
+
+//Kanto
+const bulbasaur = new Pokemon(
+  "Bulbasaur", 
+  "https://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/100px-001Bulbasaur.png", 
+  "Grass"
+);
+
+const charmander = new Pokemon(
+  "Charmander",
+  "https://cdn.bulbagarden.net/upload/thumb/7/73/004Charmander.png/100px-004Charmander.png",
+  "Fire"
+);
+
+const squirtle = new Pokemon(
+  "Squirtle",
+  "https://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/100px-007Squirtle.png",
+  "Water"
+);
+
+//Galar
+const grookey = new Pokemon(
+  "Grookey",
+  "https://cdn.bulbagarden.net/upload/thumb/9/93/810Grookey.png/100px-810Grookey.png",
+  "Grass"
+);
+
+const scorbunny = new Pokemon(
+  "Scorbunny",
+  "https://cdn.bulbagarden.net/upload/thumb/0/06/813Scorbunny.png/100px-813Scorbunny.png",
+  "Fire"
+);
+
+const sobble = new Pokemon(
+  "Sobble",
+  "https://cdn.bulbagarden.net/upload/thumb/9/9b/816Sobble.png/100px-816Sobble.png",
+  "Water"
+);
+
 // Global Variables
 let players = []
 
-const starters = ['fire', 'water', 'grass']
+const Kanto = [bulbasaur, charmander, squirtle];
+
+const Galar = [grookey, scorbunny, sobble];
 
 const starterFinder = (players, starters) => {
+  let results = []
   players.forEach(player => {
     num = Math.floor(Math.random() * starters.length);
-    match = [];
-    match.push(player);
-    match.push(starters[num]);
+    match = {
+      player: '',
+      pokemon: {}
+    };
+    match.player = player;
+    match.pokemon = starters[num];
     starters.splice(num, 1);
-    console.log(match);
+    results.push(match);
   });
+  return results;
 };
+
+const findGen = (region) => {
+  if(region === "Kanto") {
+    return Kanto;
+  } else if(region === "Galar"){
+    return Galar
+  } else {
+    console.log("error, gen not found")
+  }
+};
+
+const makeCards = (results) => {
+  console.log(results)
+  results.forEach(result => {
+    $('#player-cards').append(`
+    <div class="player">
+      <h3>${result.player}:</h3>
+      <h5>${result.pokemon.name}</h5>
+      <img src=${result.pokemon.img}>
+    </div>
+    `)
+  })
+}
 
 $("#game-info").submit((event) => {
   event.preventDefault();
@@ -21,6 +97,7 @@ $("#game-info").submit((event) => {
     $('#player2Name').val(), 
     $('#player3Name').val(),
   ];
-  console.log($("#genSelect").val())
-  starterFinder(players, starters)
+  let gen = findGen($('#genSelect').val())
+  results = starterFinder(players, gen)
+  makeCards(results)
 });
