@@ -1,6 +1,7 @@
 body{
   background-image: url(http://getwallpapers.com/wallpaper/full/9/8/0/1044698-grass-pokemon-wallpapers-1920x1200-for-samsung-galaxy.jpg);
-  /* background-size: cover; */
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Title */
