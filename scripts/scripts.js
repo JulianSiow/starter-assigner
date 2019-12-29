@@ -82,11 +82,11 @@ const makeCards = (results) => {
   results.forEach(result => {
     $('#player-cards').append(`
     <div class="player">
-      <h3>${result.player}:</h3>
+      <h2>${result.player}:</h2>
       <div class="pokemon">
         <div class="pokemon-hidden"></div>
         <div class="pokemon-card">
-          <h5>${result.pokemon.name}</h5>
+          <h4>${result.pokemon.name}</h4>
           <img src=${result.pokemon.img}>
         </div>
       </div>

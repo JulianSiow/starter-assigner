@@ -16,6 +16,8 @@ Starter Assigner was built for my friends and I to randomly assign starter pokem
 
 * Different options for more or less than 3 people
 * Allows for repeat pokemon
+* Add cutomization to Pokemon cards based on type 
+* Clicking submit button multiple cards just appends new cards
 
 ### Notable Bugs/To Dos:
 
