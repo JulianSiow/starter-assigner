@@ -21,4 +21,7 @@ Starter Assigner was built for my friends and I to randomly assign starter pokem
 
 ### Notable Bugs/To Dos:
 
+* Find Starters button should clear out the previous starters before creating new ones
+* Background styling broken on mobile on Galaxy S10+
+* Hover effect broken on IPhone 7
 * Code cleanup
