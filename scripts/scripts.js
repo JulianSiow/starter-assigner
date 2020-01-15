@@ -224,7 +224,7 @@ const makeCards = (results) => {
     </div>
     `)
   })
-}
+};
 
 $("#game-info").submit((event) => {
   event.preventDefault();
